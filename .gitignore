@@ -1,0 +1,23 @@
+# 환경 변수 — 시크릿 포함, 절대 커밋 금지
+.env
+
+# 데이터베이스 파일
+*.db
+*.sqlite3
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

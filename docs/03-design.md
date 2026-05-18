@@ -64,3 +64,5 @@ Tailwind 유틸리티 클래스로 표현하며, 아래 토큰 외 임의 스타
 | `sqlalchemy` | 최신 안정 | ORM | 결정 #3 |
 | `pydantic` | v2 | 요청/응답 검증 | FastAPI 내장 의존성 |
 | Tailwind CSS CDN | 최신 | 스타일 | 결정 #4 |
+| `httpx` | 최신 안정 | FastAPI TestClient 의존성 | pytest에서 TestClient 사용 시 필수 |
+| `pytest` | 최신 안정 | 테스트 프레임워크 | 절대 규칙 #3 (테스트 없이 완료 금지) |
