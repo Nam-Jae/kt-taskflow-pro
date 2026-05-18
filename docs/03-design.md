@@ -66,3 +66,4 @@ Tailwind 유틸리티 클래스로 표현하며, 아래 토큰 외 임의 스타
 | Tailwind CSS CDN | 최신 | 스타일 | 결정 #4 |
 | `httpx` | 최신 안정 | FastAPI TestClient 의존성 | pytest에서 TestClient 사용 시 필수 |
 | `pytest` | 최신 안정 | 테스트 프레임워크 | 절대 규칙 #3 (테스트 없이 완료 금지) |
+| `aiofiles` | 최신 안정 | FastAPI 정적 파일 서빙 | frontend/ 를 백엔드에서 직접 서빙해 CORS 불필요 |

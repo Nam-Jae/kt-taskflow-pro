@@ -1,9 +1,11 @@
 import logging
 from contextlib import asynccontextmanager
+from pathlib import Path
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
+from fastapi.staticfiles import StaticFiles
 from starlette.exceptions import HTTPException as StarletteHTTPException
 from database import engine, Base
 from routers import tasks
@@ -46,3 +48,8 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 
 
 app.include_router(tasks.router, prefix="/api")
+
+# API 라우터 등록 후 마운트 — 정적 파일보다 API가 우선 처리됨
+_frontend_dir = Path(__file__).parent.parent / "frontend"
+if _frontend_dir.exists():
+    app.mount("/", StaticFiles(directory=str(_frontend_dir), html=True), name="frontend")
